@@ -3,7 +3,8 @@
 ;; Place your private configuration here
 (setq
  projectile-project-search-path '("~/dev/nu/")
- doom-font (font-spec :family "Fira Code" :size 16))
+ doom-font (font-spec :family "Fira Code" :size 16)
+ avy-all-windows 't)
 
 (let ((nudev-emacs-path "~/dev/nu/nudev/ides/emacs/"))
   (when (file-directory-p nudev-emacs-path)
