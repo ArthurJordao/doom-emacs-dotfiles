@@ -25,4 +25,12 @@
 (after! org
   (map! :map org-mode-map
         :n "M-j" #'org-metaup
-        :n "M-k" #'org-metadown))
+        :n "M-k" #'org-metadown)
+  (setq! org-todo-keywords '((sequence "TODO(t)" "INPROGRESS(i)" "WAITING(w)" "|" "DONE(d)" "CANCELLED(c)"))
+         org-log-done 'time
+         org-todo-keyword-faces
+         '(("TODO" :foreground "#7c7c75" :weigh normal :underline t)
+           ("WAITING" :foreground "#9f7efe" :weigh normal :underline t)
+           ("INPROGRESS" :foreground "#0098dd" :weigh normal :underline t)
+           ("DONE" :foreground "#50a14f" :weigh normal :underline t)
+           ("CANCELLED" :foreground "#ff6480" :weigh normal :underline t))))
