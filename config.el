@@ -21,3 +21,8 @@
 (add-to-list 'default-frame-alist '(height . 48))
 
 (add-to-list 'default-frame-alist '(width . 160))
+
+(after! org
+  (map! :map org-mode-map
+        :n "M-j" #'org-metaup
+        :n "M-k" #'org-metadown))
